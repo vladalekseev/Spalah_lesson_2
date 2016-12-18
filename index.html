@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+/*
+
+    //S T R I N G
+
+    var name = "Vlad";
+    var surname = "Alekseev";
+    var fullname = name + " " + surname ;
+
+    console.log(fullname.length); //длина строки
+    console.log(fullname[0]);     //1й элемент строки
+    console.log(fullname.toUpperCase());  //верхний регистр
+    console.log(fullname.toLowerCase());  //нижний регистр
+    console.log(fullname.indexOf("V" , 0)); // выводит номер буквы V в строке(2й параметр , откуда начинать отчет)
+    console.log(fullname.charAt(2));  //Обращается к 2му элементу строки
+
+    var newstr = fullname.substring(0, 5);  //выводит с 1й буквы ,(2й параметр) - длина элементов
+    console.log(newstr);
+
+    var newstr2 = fullname.substr(2,4);   // выводит 3ю букву  по 5ю
+    console.log(newstr2);
+
+    var newstr3 = fullname.slice(0,-1);   //выводит 1ю букву  по  последнюю(не включая)
+    console.log(newstr3);
+
+    console.log(name > surname);         //сравнение строк по кодировки
+
+
+    var str = "asd as da sd";
+    var arr = str.split(" ");
+    console.log(arr);
+
+    //М А С С И В Ы
+
+    var nameArr = name.split(""); //из строки делает массив, (параметр) по какаим критерием сортирует
+    console.log(nameArr);
+
+    var arrNameReversed = nameArr.reverse();
+    console.log(arrNameReversed); //элементы в обратном порядке
+
+    console.log(nameArr.sort()); //сортерует по кодировки
+
+    console.log(nameArr.join(" : "));  // разделяет массив :
+*/
+
+
+/*
+
+
+    var arr = "Lorem Ipsum - це текст-риба, що використовується в друкарстві та дизайні. андартною  аж з XVI сторіччя. ";
+    var arrSplited = arr.split(" ");
+
+    for(var i =0; i < arrSplited.length; i++) {
+        if(i % 2 == 0) {
+            arrSplited[i] = arrSplited[i].toUpperCase();
+        }
+
+        console.log(arrSplited[i]);
+a
+    }
+    */
+
+
+/*
+
+    var str = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, aspernatur.";
+
+    var arr = str.split(" ");
+    console.log(arr);
+
+    var arr2 = arr.splice(2 , 4, "input instead of "); //вырезает элементы с массива (вырезает с 2го по 4й элемент),3й параметр вставляет вместо вырезаных элементов
+    console.log(arr2);
+    console.log(arr);
+*/
+/*
+var arr = ["one", "two", "three", "four", "five"];
+    arr.forEach(function(element,index,arr) {           //проходит все элементы массива
+        console.log(element , index, arr[index]);
+
+    });
+  */
+/*
+var arr = ["one", "two", "three", "four", "five"];
+
+ var arr2 =  arr.map(function(element, index, array) {
+     return element.charAt(0).toUpperCase() + element.slice(1);  //создает новый массив в котором возвращает true/false
+ });
+console.log(arr2);
+   */
+
+/*
+
+var arr = ["one", "two", "three", "four", "five"];
+
+  var filtred = arr.filter(function(element,index,array){
+      return element.length > 3 ;                           //переберает массив с возможностью фильтровать
+  });
+    console.log(filtred);
+*/
+/*
+
+var arr = ["one$", "two", "three", "four$", "five"];
+var newArr = [];
+
+    var k = arr.some(function(element,index,array) {         //some проверяет если хоть 1 елемент совпадает проверки(true)
+                                                             //every проверяет если у всех елементов присутсвует проверка(true)
+       var j = element.indexOf("$");                        // проверяет массив ,в переменную заносится true/false
+       j ? newArr.push(element) : "" ;
+        return j ;
+    });
+
+    console.log(newArr);
+*/
+/*
+var arr = [1,2,3,4,5,6,7,8];
+    console.log(arr);
+
+var arr2 = arr.map(function(element) {
+    return element;
+});
+
+console.log(arr2);
+   */
+/*
+var arr = [1,2,3,4,5,6,7,8,9];
+var reduced = arr.reduce(function(init, next, index , array){
+    return init+next;
+});
+    console.log(reduced);
+*/
+/*
+var arr = [1,2,3,4,5,6,7,8,9];
+var reduced = arr.reduce(function(init, next, index , array){
+    init.push(next);
+    return init;
+}, []);
+console.log(reduced);
+ */
+/*
+
+var arr = [1,2,3,4,5];
+var reduced = arr.reduce(function(init, next, index , array){
+
+    init.push(init.length == 0 ? next : array[index-1] + next);
+
+    return init;
+}, []);
+
+console.log(reduced);
+*/
+
+</script>
+
+</body>
+</html>
