@@ -157,6 +157,39 @@ var reduced = arr.reduce(function(init, next, index , array){
 console.log(reduced);
 */
 
+
+
+var text = "student study english\nstudent study math\nstudent study Music\n" +
+        "teacher teaches Ecology\nteacher teaches Math\nteacher teaches Physics";
+
+var arr3 = text.split("\n");
+
+var ready =  arr3.map(function (element) {
+    var splited = element.split(" ");
+    return splited;
+
+});
+
+
+var result = ready.reduce(function(init,current){
+
+    var obj_data = init[current[0]] || {};
+
+    obj_data[current[1]] = obj_data[current[1]] || [];
+
+    obj_data[current[1]].push(current[2]);
+
+    init[current[0]] = obj_data;
+
+
+    return init;
+},{});
+
+
+console.log(text);
+console.log(result);
+
+
 </script>
 
 </body>
